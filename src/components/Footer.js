@@ -9,7 +9,7 @@ export const Footer = () => {
         </span>
         <ul className="flex flex-wrap items-center p-2 mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="#" target="_blank" className="hover:underline me-4 md:me-6">Instagram</a>
+            <a href="https://www.instagram.com/_ka.v.i.n_/" target="_blank" className="hover:underline me-4 md:me-6">Instagram</a>
           </li>
           <li>
             <a href="https://youtube.com" className="hover:underline me-4 md:me-6">Youtube</a>
