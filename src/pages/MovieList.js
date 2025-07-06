@@ -1,10 +1,10 @@
-import { useFetch } from "../hooks/useFetch";
-import {Card} from "../components"
+import { useTitle, useFetch } from "../hooks";
+import { Card } from "../components"
 
+export const MovieList = ({ apiPath, title }) => {
 
-export const MovieList = ({apiPath}) => {
- 
- const {data:movies}=useFetch(apiPath);
+  const { data: movies } = useFetch(apiPath);
+  useTitle(title);
 
   return (
     <main>
@@ -12,8 +12,8 @@ export const MovieList = ({apiPath}) => {
       <section className="max-w-7xl mx-auto py-7">
         <div className="flex justify-start flex-wrap other:justify-evenly">
 
-          {movies.map((movie)=>(
-          <Card key={movie.id} movie={movie}/>
+          {movies.map((movie) => (
+            <Card key={movie.id} movie={movie} />
           ))}
 
 

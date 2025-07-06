@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export const Footer = () => {
   return (
@@ -18,7 +18,7 @@ export const Footer = () => {
             <a rel="noreferrer" href="https://www.linkedin.com/in/kavin-prakash-t-57345b32a" target="_blank" className="hover:underline me-4 md:me-6">LinkedIn</a>
           </li>
           <li>
-            <a  rel="noreferrer" href="https://github.com/Kavin-Prakash-T" target="_blank" className="hover:underline">GitHub</a>
+            <a rel="noreferrer" href="https://github.com/Kavin-Prakash-T" target="_blank" className="hover:underline">GitHub</a>
           </li>
         </ul>
       </div>

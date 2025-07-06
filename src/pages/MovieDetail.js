@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Backup from "../assets/backup.png"
+import { useTitle } from "../hooks";
 export const MovieDetail = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
@@ -14,6 +15,7 @@ export const MovieDetail = () => {
     }
     fetchMovie();
   }, [params.id])
+  useTitle(movie.title);
 
   return (
     <main>
@@ -22,8 +24,8 @@ export const MovieDetail = () => {
           <img src={image} alt={movie.title} className="rounded" />
         </div>
 
-        <div className="max-w-2xl text-gray-700 text-lg dark:text-white">
-          <h1 className="text-4xl font-bold my-3 text-center lg:text-left">{movie.title}</h1>
+        <div className="max-w-2xl text-gray-700 text-lg  dark:text-white">
+          <h1 className="text-4xl font-bold  text-center lg:text-left">{movie.title}</h1>
           <p className="my-4">{movie.overview}</p>
 
           {movie.genres ? (
@@ -44,27 +46,27 @@ export const MovieDetail = () => {
             <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
             <span className=" text-gray-900 dark:text-white">{movie.vote_count}</span>
           </div>
-           
-           <p className="my-4">
+
+          <p className="my-4">
             <span className="mr-2 font-bold">Runtime:</span>
             <span>{movie.runtime} min.</span>
-           </p>
-            <p className="my-4">
+          </p>
+          <p className="my-4">
             <span className="mr-2 font-bold">Budget:</span>
             <span>{movie.budget}</span>
-           </p>
-            <p className="my-4">
+          </p>
+          <p className="my-4">
             <span className="mr-2 font-bold">Revenue:</span>
             <span>{movie.revenue}</span>
-           </p>
-            <p className="my-4">
+          </p>
+          <p className="my-4">
             <span className="mr-2 font-bold">Release Date:</span>
             <span>{movie.release_date}</span>
-           </p>
-            <p className="my-4">
+          </p>
+          <p className="my-4">
             <span className="mr-2 font-bold">IMDB code:</span>
             <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer">{movie.imdb_id}</a>
-           </p>
+          </p>
         </div>
       </section>
     </main>
